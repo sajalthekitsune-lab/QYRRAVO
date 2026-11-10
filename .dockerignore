@@ -1,0 +1,9 @@
+node_modules
+data
+uploads
+.env
+qyrravo-app
+qyrravo-data
+*.zip
+e2e
+test

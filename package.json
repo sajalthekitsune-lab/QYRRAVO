@@ -1,0 +1,16 @@
+{
+  "name": "qyrravo-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QYRRAVO - Quietly better. International multi-vendor marketplace (zero npm dependencies).",
+  "type": "commonjs",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server/index.js",
+    "migrate": "node --disable-warning=ExperimentalWarning scripts/migrate.js",
+    "create-admin": "node --disable-warning=ExperimentalWarning scripts/create-admin.js",
+    "fetch-rates": "node --disable-warning=ExperimentalWarning scripts/fetch-rates.js",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-concurrency=1 test/*.test.js"
+  }
+}

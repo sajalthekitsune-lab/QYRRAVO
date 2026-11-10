@@ -1,0 +1,15 @@
+# One-click deploy on Render.com (needs a paid "Starter" web service + disk so your data is kept).
+services:
+  - type: web
+    name: qyrravo
+    runtime: docker
+    plan: starter
+    disk: { name: data, mountPath: /data, sizeGB: 5 }
+    envVars:
+      - { key: APP_URL, sync: false }          # https://yourdomain.com
+      - { key: OWNER_EMAIL, value: qyrravo@gmail.com }
+      - { key: OWNER_PASSWORD, sync: false }   # choose a strong password
+      - { key: ANTHROPIC_API_KEY, sync: false }
+      - { key: GOOGLE_CLIENT_ID, sync: false }
+      - { key: GOOGLE_CLIENT_SECRET, sync: false }
+      - { key: PAYMENT_MODE, value: "off" }
